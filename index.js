@@ -55,6 +55,11 @@ app.get("/404", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "404.html"));
 });
 
+app.get("/funny", (req, res) => {
+  res.sendFile(path.join(__dirname, "static", "test-1.html"));
+});
+
+
 app.get("/*", (req, res) => {
   res.redirect("/404");
 });
